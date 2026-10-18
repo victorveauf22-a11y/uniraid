@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Casi Profesional - UniRaid 2027</title>
+<meta name="description" content="Casi Profesional: two students from Barcelona driving 2,400 km across Morocco in the UniRaid humanitarian convoy, February 2027."/>
+<meta property="og:title" content="Casi Profesional - UniRaid 2027"/>
+<meta property="og:description" content="Two students, one car, 2,400 km across Morocco, 40 kg of school supplies."/>
+<meta property="og:image" content="img/hero.jpg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d0c0a; --ink2:#161410; --ink3:#211e18;
+  --paper:#efe6d6; --paper2:#e4d8c2;
+  --sand:#eaa03a; --terra:#d8643b; --oasis:#5fb8a2;
+  --line:rgba(239,230,214,.14); --mute:rgba(239,230,214,.62);
+  --display:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;
+  --body:'Hanken Grotesk','Segoe UI',Arial,sans-serif;
+  --mono:'DM Mono',ui-monospace,Menlo,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden;scroll-padding-top:70px}
+body{font-family:var(--body);background:var(--ink);color:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+img{max-width:100%}
+a{color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 40px;background:rgba(13,12,10,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-logo{font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo i{width:10px;height:10px;background:var(--sand);display:inline-block;transform:rotate(45deg)}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-decoration:none;transition:color .2s;position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--sand);transition:width .25s}
+.nav-links a:hover,.nav-links a.on{color:var(--sand)}
+.nav-links a:hover::after,.nav-links a.on::after{width:100%}
+.lang-switcher{display:flex;gap:4px}
+.lang-btn{background:none;border:1px solid var(--line);color:var(--mute);font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;padding:5px 9px;cursor:pointer;transition:all .2s}
+.lang-btn:hover{color:var(--sand);border-color:var(--sand)}
+.lang-btn.active{background:var(--sand);color:var(--ink);border-color:var(--sand)}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:6px;background:none;border:none;cursor:pointer;z-index:200}
+.hamburger span{display:block;width:24px;height:2px;background:var(--sand);transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-overlay{display:none;position:fixed;inset:0;z-index:150;background:rgba(13,12,10,.98);flex-direction:column;justify-content:center;align-items:center;gap:22px;padding:80px 24px 40px}
+.mobile-overlay.open{display:flex}
+.mobile-overlay a{font-family:var(--display);font-size:2.2rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--paper);text-decoration:none}
+.mobile-overlay a:hover{color:var(--sand)}
+
+/* BUTTONS */
+.btn{display:inline-block;padding:14px 28px;font-family:var(--mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:transform .2s,background .2s,color .2s;border:1px solid transparent}
+.btn-primary{background:var(--sand);color:var(--ink);font-weight:500}
+.btn-primary:hover{background:var(--paper);transform:translateY(-2px)}
+.btn-outline{border-color:var(--paper);color:var(--paper)}
+.btn-outline:hover{background:var(--paper);color:var(--ink)}
+
+/* SECTION BASICS */
+section{padding:110px 40px;position:relative}
+.container{max-width:1180px;margin:0 auto}
+.section-tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--sand);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.section-tag::before{content:"";width:34px;height:1px;background:currentColor}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,6vw,4.8rem);line-height:.95;letter-spacing:.005em;text-transform:uppercase;margin-bottom:28px}
+h2 em{font-style:normal;color:var(--sand)}
+.paper{background:var(--paper);color:var(--ink)}
+.paper .section-tag{color:var(--terra)}
+.paper h2 em{color:var(--terra)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* HERO */
+#hero{min-height:100vh;padding:130px 40px 0;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;
+  background:radial-gradient(900px 600px at 78% 30%,rgba(234,160,58,.12),transparent 60%),var(--ink)}
+#hero::before{content:"";position:absolute;inset:0;background:url(img/topo.svg) center/cover no-repeat;opacity:.09;pointer-events:none}
+.hero-grid{position:relative;max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:center}
+.hero-tag{font-family:var(--mono);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);display:inline-flex;align-items:center;gap:12px;margin-bottom:22px}
+.hero-tag::before{content:"";width:8px;height:8px;background:var(--terra);border-radius:50%;box-shadow:0 0 0 4px rgba(216,100,59,.25);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 9px rgba(216,100,59,0)}}
+h1{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(5rem,15vw,13.5rem);line-height:.82;letter-spacing:-.01em;margin-bottom:26px}
+h1 b{color:var(--sand);font-weight:inherit}
+h1 .yr{font-size:.34em;letter-spacing:.35em;color:var(--paper);display:block;margin-top:.35em;font-weight:700;opacity:.9}
+.hero-kicker{font-family:var(--mono);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:12px}
+.hero-sub{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--paper);max-width:560px;margin-bottom:12px}
+.hero-facts{font-family:var(--mono);font-size:.8rem;color:var(--mute);margin-bottom:34px;letter-spacing:.04em}
+.hero-facts b{color:var(--sand);font-weight:500}
+.race-date{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin-bottom:30px;opacity:.75}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-plate{position:relative;justify-self:end;width:min(100%,430px);transform:rotate(2.2deg);transition:transform .5s}
+.hero-plate:hover{transform:rotate(0)}
+.hero-plate .frame{padding:12px 12px 44px;background:var(--paper);box-shadow:0 30px 70px rgba(0,0,0,.6)}
+.hero-plate img{width:100%;aspect-ratio:5/4;object-fit:cover;display:block;filter:saturate(1.1) contrast(1.05)}
+.hero-plate .cap{position:absolute;left:24px;bottom:14px;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.hero-plate .stamp{position:absolute;right:-18px;top:-18px;width:92px;height:92px;border-radius:50%;background:var(--terra);color:var(--ink);display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:800;font-size:1.05rem;line-height:1;letter-spacing:.05em;transform:rotate(-12deg);text-transform:uppercase}
+.hero-route{position:relative;max-width:1280px;margin:70px auto 0;width:100%;padding-bottom:26px}
+.hero-route svg{width:100%;height:auto;display:block;overflow:visible}
+.hero-route .path{fill:none;stroke:var(--sand);stroke-width:2.5;stroke-dasharray:8 7;stroke-linecap:round}
+.hero-route .path-draw{fill:none;stroke:var(--sand);stroke-width:3;stroke-linecap:round;stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 3.6s .5s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero-route .dot{fill:var(--ink);stroke:var(--sand);stroke-width:3}
+.hero-route text{font-family:var(--mono);font-size:13px;letter-spacing:.14em;fill:var(--paper);text-transform:uppercase}
+.hero-route .sub{fill:var(--mute);font-size:11px}
+
+/* ABOUT */
+#about{background:var(--paper);color:var(--ink)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:start}
+.about-text p{font-size:1.05rem;line-height:1.75;color:rgba(13,12,10,.78);margin-bottom:18px;max-width:60ch}
+.about-text strong{color:var(--ink)}
+.charity-box{border-left:3px solid var(--terra);padding:6px 0 6px 20px;margin:26px 0;background:none}
+.charity-box .label{font-family:var(--mono);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-bottom:6px}
+.charity-box p{font-size:.97rem!important;line-height:1.65!important;margin:0!important;color:rgba(13,12,10,.82)!important}
+#about strong[style]{color:var(--terra)!important}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;border-top:2px solid var(--ink)}
+.stat{padding:16px 14px 0 0}
+.stat-num{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,4vw,3.4rem);line-height:1;color:var(--ink)}
+.stat-lbl{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(13,12,10,.55);margin-top:6px}
+.route-card{background:var(--ink);color:var(--paper);padding:26px;position:sticky;top:90px;box-shadow:12px 12px 0 var(--terra)}
+.route-card .section-tag{color:var(--sand)!important}
+.route-card img{width:100%;display:block;margin-bottom:22px;filter:invert(.92) hue-rotate(180deg) saturate(.8);mix-blend-mode:screen;opacity:.95}
+.route-stop{display:flex;gap:14px;margin-bottom:0;position:relative;padding-bottom:18px}
+.route-stop:last-child{padding-bottom:0}
+.route-stop:not(:last-child)::after{content:"";position:absolute;left:8px;top:20px;bottom:0;width:1px;background:var(--line)}
+.stop-dot{width:17px;height:17px;border-radius:50%;background:var(--sand);flex-shrink:0;margin-top:3px;position:relative;z-index:1}
+.stop-dot.small{background:var(--ink);border:2px solid var(--sand);width:17px;height:17px}
+.stop-name{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase}
+.stop-desc{font-family:var(--mono);font-size:.7rem;color:var(--mute);letter-spacing:.06em}
+
+/* STAGES */
+#stages{background:var(--ink2);border-top:1px solid var(--line)}
+.stages-intro{color:var(--mute);max-width:640px;font-size:1.05rem;line-height:1.75}
+.stages-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:54px;border:1px solid var(--line)}
+.stage-card{padding:38px 36px 40px;position:relative;overflow:hidden;border:1px solid var(--line);margin:-1px 0 0 -1px;transition:background .3s}
+.stage-card:hover{background:rgba(234,160,58,.06)}
+.stage-card::before{content:attr(data-num);position:absolute;right:14px;top:-8px;font-family:var(--display);font-weight:900;font-size:8.5rem;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(234,160,58,.28);pointer-events:none;transition:-webkit-text-stroke-color .3s}
+.stage-card:hover::before{-webkit-text-stroke-color:var(--sand)}
+.stage-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-bottom:14px}
+.stage-title{font-family:var(--display);font-weight:800;font-size:2.1rem;text-transform:uppercase;line-height:1;letter-spacing:.02em;margin-bottom:16px;max-width:75%}
+.stage-body{font-size:.95rem;line-height:1.75;color:var(--mute)}
+.stage-body strong{color:var(--paper);font-weight:600}
+
+/* MISSION */
+#mission{background:linear-gradient(180deg,var(--ink) 0%,#1a120b 100%);overflow:hidden}
+#mission::before{content:"";position:absolute;inset:0;background:url(img/topo.svg) 20% 60%/1500px no-repeat;opacity:.07;pointer-events:none}
+.mission-inner{position:relative;max-width:820px;margin:0 auto}
+.mission-inner .section-tag{justify-content:center}
+.mission-inner h2{text-align:center}
+.mission-inner>p{font-size:1.1rem;line-height:1.85;color:var(--mute);margin-bottom:20px}
+.mission-inner strong{color:var(--paper)}
+.mission-boxes{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:40px 0;border:1px solid var(--line)}
+.mission-boxes .charity-box{margin:0;padding:26px;border:none;border-left:3px solid var(--sand)}
+.mission-boxes .charity-box+.charity-box{border-left:3px solid var(--oasis)}
+.mission-boxes .label{color:var(--sand)!important}
+.mission-boxes .charity-box+.charity-box .label{color:var(--oasis)!important}
+.mission-boxes .charity-box p{color:var(--mute)!important;font-size:.95rem!important}
+.mission-boxes .charity-box p strong{color:var(--paper)!important}
+blockquote{margin:52px 0;padding:0 0 0 30px;border-left:3px solid var(--terra)}
+blockquote p{font-family:var(--display)!important;font-weight:700;font-size:clamp(1.7rem,3.6vw,2.6rem)!important;line-height:1.08!important;text-transform:uppercase;color:var(--paper)!important;margin:0!important;letter-spacing:.01em}
+
+/* VIDEO */
+#video{background:var(--ink2);border-top:1px solid var(--line)}
+#video .container{text-align:left}
+.video-link{display:block;position:relative;aspect-ratio:21/9;border:1px solid var(--line);text-decoration:none;overflow:hidden;margin-top:12px}
+.video-link img{width:100%;height:100%;object-fit:cover;display:block;opacity:.8;transition:transform .6s,opacity .3s}
+.video-link:hover img{transform:scale(1.03);opacity:1}
+.video-link .play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(0deg,rgba(13,12,10,.55),transparent 55%)}
+.video-link .play div{width:92px;height:92px;border-radius:50%;background:var(--sand);display:grid;place-items:center;transition:transform .3s}
+.video-link:hover .play div{transform:scale(1.1)}
+.video-link .yt{position:absolute;left:22px;bottom:18px;font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
+
+/* GALLERY */
+#gallery{background:var(--ink)}
+.gallery-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:10px;margin-top:40px}
+.gallery-img{overflow:hidden;position:relative;cursor:zoom-in;background:var(--ink3)}
+.gallery-img:nth-child(1){grid-column:span 3;grid-row:span 3}
+.gallery-img:nth-child(2){grid-column:span 3;grid-row:span 2}
+.gallery-img:nth-child(3){grid-column:span 2;grid-row:span 2}
+.gallery-img:nth-child(4){grid-column:span 1;grid-row:span 2}
+.gallery-img:nth-child(5){grid-column:span 3;grid-row:span 2}
+.gallery-img:nth-child(6){grid-column:span 3;grid-row:span 1}
+.gallery-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s,filter .4s;filter:saturate(.9)}
+.gallery-img:hover img{transform:scale(1.06);filter:saturate(1.2)}
+.lightbox{position:fixed;inset:0;z-index:500;background:rgba(13,12,10,.96);display:none;align-items:center;justify-content:center;padding:30px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:90vh;box-shadow:0 20px 80px rgba(0,0,0,.8)}
+.lightbox span{position:absolute;top:20px;right:26px;font-family:var(--mono);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sand)}
+
+/* TEAM */
+#team{background:var(--paper);color:var(--ink)}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:46px}
+.team-card{background:var(--ink);color:var(--paper);padding:34px;display:grid;grid-template-columns:120px 1fr;gap:26px;position:relative;transition:transform .3s,box-shadow .3s}
+.team-card:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--terra)}
+.team-avatar{width:120px;height:150px;overflow:hidden;background:var(--ink3);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:900;font-size:3.2rem;color:var(--sand);position:relative;align-self:start}
+.team-avatar img{position:absolute;left:0;top:0;width:120px;height:100%;max-width:none;object-fit:cover;object-position:center top}
+.team-name{font-family:var(--display);font-weight:800;font-size:2.1rem;text-transform:uppercase;line-height:1;letter-spacing:.02em}
+.team-role{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);margin:8px 0 12px}
+.team-bio{font-size:.9rem;line-height:1.65;color:var(--mute)}
+.team-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);color:var(--paper);padding:4px 9px}
+
+/* PARTNERS (hidden until consent) */
+#partners{background:var(--ink2);border-top:1px solid var(--line)}
+#partners[hidden]{display:none}
+.partner-row{display:flex;flex-wrap:wrap;gap:0;margin-top:34px;border:1px solid var(--line)}
+.partner{flex:1 1 220px;padding:34px 26px;border:1px solid var(--line);margin:-1px 0 0 -1px;font-family:var(--display);font-weight:800;font-size:1.9rem;text-transform:uppercase;letter-spacing:.06em;text-align:center}
+.partner small{display:block;font-family:var(--mono);font-weight:400;font-size:.62rem;letter-spacing:.2em;color:var(--sand);margin-top:6px}
+.partners-p{color:var(--mute)}
+
+/* SPONSORS */
+#sponsors{background:var(--ink);border-top:1px solid var(--line)}
+.sponsors-p{color:var(--mute);max-width:600px;font-size:1.05rem;line-height:1.75}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:52px}
+.tier-card{padding:30px 24px;background:var(--ink2);border:1px solid var(--line);border-top-width:4px;position:relative;transition:transform .3s}
+.tier-card:hover{transform:translateY(-8px)}
+.tier-platinum{border-top-color:#b9b2e6}
+.tier-gold{border-top-color:var(--sand)}
+.tier-silver{border-top-color:#c9c9c9}
+.tier-bronze{border-top-color:var(--terra)}
+.tier-name{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+.tier-amount{font-family:var(--display);font-weight:800;font-size:3rem;line-height:1;margin-bottom:22px}
+.tier-platinum .tier-amount{color:#b9b2e6}.tier-gold .tier-amount{color:var(--sand)}.tier-silver .tier-amount{color:#d6d6d6}.tier-bronze .tier-amount{color:var(--terra)}
+.tier-perks{list-style:none}
+.tier-perks li{font-size:.88rem;color:var(--mute);padding:8px 0;border-top:1px solid var(--line);display:flex;gap:10px}
+.tier-perks li::before{content:"+";font-family:var(--mono);color:var(--sand)}
+.sponsor-cta{margin-top:56px;padding:46px;background:var(--sand);color:var(--ink);display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center}
+.sponsor-cta h3{font-family:var(--display);font-weight:800;font-size:2.4rem;text-transform:uppercase;line-height:1;margin-bottom:10px}
+.sponsor-cta p{font-size:1rem;line-height:1.6;color:rgba(13,12,10,.8);margin:0}
+.sponsor-cta .cta-side{text-align:left}
+.sponsor-cta .btn-primary{background:var(--ink);color:var(--paper)}
+.sponsor-cta .btn-primary:hover{background:var(--paper);color:var(--ink)}
+.sponsor-cta a.small{color:var(--ink)!important;border-bottom:1px solid var(--ink)}
+
+/* DONATE */
+#donate{background:var(--ink2);border-top:1px solid var(--line)}
+.donate-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:24px}
+.donate-grid>div:first-child p{color:var(--mute);line-height:1.8;font-size:1.02rem;margin-bottom:28px}
+.donate-items{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+.donate-items .charity-box{margin:0;padding:24px;border:1px solid var(--line);margin:-1px 0 0 -1px;background:none}
+.donate-items .label{font-family:var(--display)!important;font-size:2rem!important;letter-spacing:.05em!important;color:var(--sand)!important}
+.donate-items p{color:var(--mute)!important;font-size:.9rem!important}
+.cta-btn{display:inline-block;padding:14px 28px;background:var(--sand);color:var(--ink);font-family:var(--mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:background .2s,transform .2s}
+.cta-btn:hover{background:var(--paper);transform:translateY(-2px)}
+
+/* CONTACT */
+#contact{background:var(--terra);color:var(--ink);overflow:hidden}
+#contact::before{content:"";position:absolute;inset:0;background:url(img/topo.svg) center/cover;opacity:.12;mix-blend-mode:multiply;filter:invert(1);pointer-events:none}
+.contact-inner{position:relative;max-width:820px;margin:0 auto}
+#contact .section-tag{color:var(--ink)!important;justify-content:center}
+#contact h2{text-align:center;font-size:clamp(3.4rem,10vw,8rem)}
+#contact h2 em{color:var(--paper)}
+.contact-inner>p{text-align:center;max-width:540px;margin:0 auto 30px;font-size:1.05rem;color:rgba(13,12,10,.82)}
+.contact-main{text-align:center}
+.contact-email{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,4.2vw,2.8rem);color:var(--ink);text-decoration:none;border-bottom:3px solid var(--ink);line-height:1.2;word-break:break-word}
+.contact-email:hover{color:var(--paper);border-color:var(--paper)}
+.phones{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:center}
+.phones a{font-family:var(--mono);font-size:1rem;letter-spacing:.06em;color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(13,12,10,.4)}
+.contact-card{margin-top:34px;padding:22px 26px;background:var(--ink);color:var(--paper);text-align:center}
+#contact .contact-card .section-tag{color:var(--sand)!important;margin-bottom:14px}
+.contact-card .btn-primary{background:var(--sand)}
+.contact-line{margin-top:26px;text-align:center;color:rgba(13,12,10,.82);font-size:.95rem}
+.contact-ig{display:inline-block;margin-top:6px;font-family:var(--display);font-weight:800;font-size:1.8rem;color:var(--ink);text-decoration:none;border-bottom:3px solid var(--ink)}
+.media-block{margin-top:44px;padding-top:34px;border-top:2px solid var(--ink);text-align:left}
+.media-block .section-tag{justify-content:flex-start!important;color:var(--ink)!important}
+.media-block p{color:rgba(13,12,10,.85);font-size:1rem;line-height:1.7;margin-bottom:18px}
+.media-block a{font-family:var(--mono);font-size:.85rem;letter-spacing:.06em;color:var(--ink);font-weight:500}
+
+/* FOOTER */
+footer{background:var(--ink);padding:26px 40px;display:flex;justify-content:space-between;gap:16px;align-items:center;border-top:1px solid var(--line);font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:rgba(239,230,214,.4)}
+footer span,footer a{color:var(--sand);text-decoration:none}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-plate{justify-self:start;width:min(78%,360px)}
+  .about-grid{grid-template-columns:1fr;gap:44px}
+  .route-card{position:static}
+  .tiers{grid-template-columns:repeat(2,1fr)}
+  .donate-grid{grid-template-columns:1fr;gap:34px}
+  .sponsor-cta{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  nav{padding:12px 18px}
+  .nav-links,nav>.lang-switcher{display:none}
+  .hamburger{display:flex}
+  .video-link{aspect-ratio:16/10}
+  section{padding:72px 20px}
+  #hero{padding:104px 20px 0}
+  .hero-route{margin-top:44px}
+  .hero-route text{font-size:30px}.hero-route .sub{display:none}
+  .stages-grid{grid-template-columns:1fr}
+  .stage-card{padding:30px 22px}
+  .stage-title{max-width:70%;font-size:1.8rem}
+  .mission-boxes{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px;gap:8px}
+  .gallery-img:nth-child(n){grid-column:span 1;grid-row:span 1}
+  .gallery-img:nth-child(1){grid-column:span 2;grid-row:span 2}
+  .gallery-img:nth-child(4){grid-column:span 2}
+  .team-card{grid-template-columns:90px 1fr;padding:22px;gap:18px}
+  .team-avatar{width:90px;height:112px;font-size:2.4rem}.team-avatar img{width:90px}
+  .stats-row{grid-template-columns:repeat(2,1fr);row-gap:20px}
+  .sponsor-cta{padding:30px 22px}
+  footer{flex-direction:column;text-align:center;padding:22px 18px}
+  .btn{width:100%;text-align:center}
+  .hero-cta{flex-direction:column}
+}
+@media(max-width:520px){
+  .tiers{grid-template-columns:1fr}
+  .donate-items{grid-template-columns:1fr}
+  .hero-plate{width:78%}
+  .hero-plate .stamp{width:74px;height:74px;font-size:.85rem;right:-10px}
+  .stage-title{max-width:100%}
+  .stage-card::before{font-size:6rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.hero-route .path-draw{stroke-dashoffset:0}}
+
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#hero"><i></i>Casi Profesional</a>
+  <div class="nav-links">
+    <a href="#about" data-i18n="nav-uniraid">UniRaid</a>
+    <a href="#stages" data-i18n="nav-experience">The Experience</a>
+    <a href="#mission" data-i18n="nav-mission">Mission</a>
+    <a href="#video" data-i18n="nav-video">Video</a>
+    <a href="#gallery" data-i18n="nav-gallery">Gallery</a>
+    <a href="#team" data-i18n="nav-team">Team</a>
+    <a href="#sponsors" data-i18n="nav-support">Support Us</a>
+    <a href="#contact" data-i18n="nav-contact">Contact</a>
+  </div>
+  <div class="lang-switcher">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+  </div>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay">
+  <a href="#about" onclick="closeMobileMenu()" data-i18n="nav-uniraid">UniRaid</a>
+  <a href="#stages" onclick="closeMobileMenu()" data-i18n="nav-experience">The Experience</a>
+  <a href="#mission" onclick="closeMobileMenu()" data-i18n="nav-mission">Mission</a>
+  <a href="#video" onclick="closeMobileMenu()" data-i18n="nav-video">Video</a>
+  <a href="#gallery" onclick="closeMobileMenu()" data-i18n="nav-gallery">Gallery</a>
+  <a href="#team" onclick="closeMobileMenu()" data-i18n="nav-team">Team</a>
+  <a href="#sponsors" onclick="closeMobileMenu()" data-i18n="nav-support">Support Us</a>
+  <a href="#contact" onclick="closeMobileMenu()" data-i18n="nav-contact">Contact</a>
+  <div class="lang-switcher" style="margin-top:12px">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-tag" data-i18n="hero-tag">Morocco · February 2027</div>
+      <h1>UNI<b>RAID</b><span class="yr">2027</span></h1>
+      <p class="hero-kicker" data-i18n="hero-kicker">Student humanitarian convoy</p>
+      <p class="hero-sub" data-i18n="hero-sub">A humanitarian convoy across Morocco. 2,400 km. Two people. One cause.</p>
+      <p class="hero-facts" data-i18n="hero-facts"><b>2,400</b> km · <b>7</b> days · <b>40</b> kg of school supplies</p>
+      <p class="race-date" data-i18n="hero-countdown">exact race dates to be confirmed by UniRaid</p>
+      <div class="hero-cta">
+        <a href="https://www.papayoux-solidarite.com/fr/collecte/uniraid-2026" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="hero-btn-primary">Support the Project</a>
+        <a href="#about" class="btn btn-outline" data-i18n="hero-btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-plate">
+      <div class="frame"><img src="img/g3.jpg" alt="UniRaid car crossing the desert at dawn"/></div>
+      <div class="cap">Morocco · Piste · 2,400 km</div>
+      <div class="stamp">Feb<br>2027</div>
+    </div>
+  </div>
+  <div class="hero-route" aria-hidden="true">
+    <svg viewBox="0 0 1280 150" xmlns="http://www.w3.org/2000/svg">
+      <path class="path" d="M20,40 C200,10 260,120 420,95 S640,20 760,70 S980,130 1100,80 S1230,45 1260,100"/>
+      <path class="path-draw" d="M20,40 C200,10 260,120 420,95 S640,20 760,70 S980,130 1100,80 S1230,45 1260,100"/>
+      <g>
+        <circle class="dot" cx="20" cy="40" r="8"/><text x="20" y="20" text-anchor="start">Tanger</text>
+        <circle class="dot" cx="420" cy="95" r="6"/><text x="420" y="128" text-anchor="middle">El Hajeb · Aoufous</text>
+        <circle class="dot" cx="760" cy="70" r="6"/><text x="760" y="46" text-anchor="middle">Merzouga</text>
+        <circle class="dot" cx="1100" cy="80" r="6"/><text x="1100" y="40" text-anchor="middle">Maraton · Nkob</text>
+        <circle class="dot" cx="1260" cy="100" r="8" style="fill:var(--sand)"/><text x="1260" y="134" text-anchor="end">Marrakech</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="section-tag" data-i18n="about-tag">What is UniRaid</p>
+        <h2 data-i18n="about-h2a">A humanitarian convoy.<br><em>Not a race.</em></h2>
+        <p data-i18n="about-p1">UniRaid is a student humanitarian expedition organised by <strong>IRIDIS TRAVEL UNIRAID</strong>, a travel agency with more than 35 years of experience running raids and adventure trips across North Africa and beyond. Every year, teams of two drive 2,400 kilometres across Morocco - from the Mediterranean coast through the Atlas Mountains and the Sahara to Marrakech - carrying school supplies for rural communities that receive no other outside aid.</p>
+        <p data-i18n="about-p2">There are no rankings, no trophies, no podium. The mission is the destination: <strong>getting the supplies there</strong>, by hand, to the teachers and children waiting for them.</p>
+        <div class="charity-box">
+          <div class="label" data-i18n="about-box-label">What we bring</div>
+          <p data-i18n="about-box1-p">Each team carries <strong style="color:var(--sand);">40 kg</strong> of donated school materials - notebooks, pens, pencils, rulers, backpacks, and hygiene products - collected before departure and handed directly to schools and community centres along the route.</p>
+        </div>
+        <div class="charity-box" style="margin-top:0">
+          <div class="label" data-i18n="about-box2-label">Collective impact - February 2026</div>
+          <p data-i18n="about-box2-p">In the most recent edition, UniRaid crews delivered a combined total of <strong style="color:var(--sand);">over 15 tonnes</strong> of supplies to Moroccan villages and schools. Victor and Telmo will add their 40 kg to the February 2027 convoy.</p>
+        </div>
+        
+        <div class="stats-row">
+          <div class="stat"><div class="stat-num">2,400</div><div class="stat-lbl" data-i18n="stat-km">Kilometres</div></div>
+          <div class="stat"><div class="stat-num">7</div><div class="stat-lbl" data-i18n="stat-days">Days</div></div>
+          <div class="stat"><div class="stat-num">15t+</div><div class="stat-lbl" data-i18n="stat-aid">Aid delivered</div></div>
+          <div class="stat"><div class="stat-num">40 kg</div><div class="stat-lbl" data-i18n="stat-contrib">Our contribution</div></div>
+        </div>
+      </div>
+      <div class="reveal d2">
+        <div class="route-card">
+          <p class="section-tag" data-i18n="route-title">The Route</p>
+          <img src="img/route.png" alt="UniRaid Morocco route map"/>
+          <div class="route-stop"><div class="stop-dot"></div><div><div class="stop-name">Tanger</div><div class="stop-desc" data-i18n="stop1-desc">Start - Northern Morocco</div></div></div>
+          <div class="route-stop"><div class="stop-dot small"></div><div><div class="stop-name">El Hajeb → Aoufous</div><div class="stop-desc" data-i18n="stop2-desc">Atlas foothills & valleys</div></div></div>
+          <div class="route-stop"><div class="stop-dot small"></div><div><div class="stop-name">Merzouga</div><div class="stop-desc" data-i18n="stop3-desc">Sahara - Erg Chebbi dunes</div></div></div>
+          <div class="route-stop"><div class="stop-dot small"></div><div><div class="stop-name">Maraton → Nkob</div><div class="stop-desc" data-i18n="stop4-desc">Desert pistes & marathon stage</div></div></div>
+          <div class="route-stop"><div class="stop-dot"></div><div><div class="stop-name">Marrakech</div><div class="stop-desc" data-i18n="stop5-desc">Finish - 2,400 km completed</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAGES -->
+<section id="stages">
+  <div class="container">
+    <p class="section-tag" data-i18n="stages-tag">The Experience</p>
+    <h2 data-i18n="stages-h2a">Seven days that will <em>break you</em>. Beautifully.</h2>
+    <p class="stages-intro" data-i18n="stages-intro">UniRaid is a humanitarian mission - but the road it takes you on is unlike anything else. No GPS. No safety net. Two people, one car, a compass, and 2,400 kilometres of Morocco between you and Marrakech.</p>
+    <div class="stages-grid">
+      
+      <div class="stage-card" data-num="01">
+        <div class="stage-label" data-i18n="stage1-label">Stage highlight</div>
+        <div class="stage-title" data-i18n="stage1-title">🌙 The Night Stage</div>
+        <div class="stage-body" data-i18n="stage1-body">
+          One full stage is driven entirely in the dark. No streetlights, no road markings, no GPS - just a compass, a co-pilot with a map, and headlights cutting into the Saharan night. Teams navigate by the stars across pistes that disappear into dust. <strong>Getting lost is not a metaphor.</strong> It is a very real possibility, and the teams that finish are the ones who keep their heads.
+        </div>
+      </div>
+
+      <div class="stage-card" data-num="02">
+        <div class="stage-label" data-i18n="stage2-label">Stage highlight</div>
+        <div class="stage-title" data-i18n="stage2-title">⛺ The Marathon Stage</div>
+        <div class="stage-body" data-i18n="stage2-body">
+          The Marathon Stage drops teams in the middle of nowhere with no external assistance allowed overnight. No mechanics, no support vehicles, no phone signal. If the car breaks down, you fix it - or you sleep next to it. Teams camp under the open sky somewhere between the dunes and the Atlas, with nothing but what they packed and each other. <strong>It is the purest version of the expedition.</strong>
+        </div>
+      </div>
+
+      <div class="stage-card" data-num="03">
+        <div class="stage-label" data-i18n="stage3-label">Navigation</div>
+        <div class="stage-title" data-i18n="stage3-title">🧭 No GPS. Full stop.</div>
+        <div class="stage-body" data-i18n="stage3-body">
+          UniRaid explicitly prohibits GPS devices. Every kilometre is navigated using a compass and the "GPS Trip" app - a basic track logger with no routing. <strong>You know where you started. You know where you need to go.</strong> What happens in between is up to you. This is intentional: the desert demands presence, not screens.
+        </div>
+      </div>
+
+      <div class="stage-card" data-num="04">
+        <div class="stage-label" data-i18n="stage4-label">The full picture</div>
+        <div class="stage-title" data-i18n="stage4-title">🏜️ 2,400 km of contrast</div>
+        <div class="stage-body" data-i18n="stage4-body">
+          Mediterranean coast. Atlantic plains. The High Atlas at altitude. Pre-Saharan hammada. The Erg Chebbi dunes at Merzouga. The Draa Valley. The Nkob gorges. Then Marrakech. <strong>Seven days, seven completely different Moroccos</strong> - and somewhere along every one of them, a school waiting for what you brought.
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="mission-inner">
+    <p class="section-tag" style="text-align:center" data-i18n="mission-tag">Where it goes</p>
+    <h2 style="text-align:center" data-i18n="mission-h2">The communities<br><em>behind the kilometres</em></h2>
+    <p data-i18n="mission-p1">Morocco's rural interior is home to hundreds of villages with limited access to basic school materials. UniRaid routes pass directly through these areas - the High Atlas mountain communities, the pre-Saharan towns of the Draa and Ziz valleys, and the desert villages near Merzouga and Erfoud.</p>
+
+    <div class="mission-boxes">
+      <div class="charity-box" style="margin:0">
+        <div class="label" data-i18n="mission-box1-label">📍 Who receives the aid</div>
+        <p data-i18n="mission-box1-p">Rural primary schools, community centres, and local associations in towns including <strong>El Hajeb, Aoufous, Merzouga, Nkob,</strong> and villages in the Atlas foothills - places that are hours from the nearest city and rarely reached by aid organisations.</p>
+      </div>
+      <div class="charity-box" style="margin:0">
+        <div class="label" data-i18n="mission-box2-label">⚽ Our focus - sport</div>
+        <p data-i18n="mission-box2-p">Casi Profesional is going all-in on <strong>awakening the sporting side of kids</strong>. We're bringing deflated footballs, basketballs, rugby balls, frisbees, jump ropes, bibs, cones, and pumps - everything needed to set up a game anywhere, instantly. No facility required. Just space, kids, and a ball.</p>
+      </div>
+    </div>
+
+    <p data-i18n="mission-p2">UniRaid runs <strong>twice a year</strong> - February and October - each edition built around specific solidarity projects, agreements with local authorities, and vetted partner associations on the ground. The supplies are never dropped at a warehouse or handed to an intermediary. Teams deliver them <strong>in person, directly at the school doors</strong>.</p>
+    <p data-i18n="mission-p3">The Director of UniRaid was previously the Director of the <strong>first Convoy of Solidarity Doctors integrated into the Paris-Dakar Rally in Africa in 1998</strong> - giving the organisation more than 30 years of experience in humanitarian logistics in the desert. This is not a photo opportunity. It is a serious, structured solidarity operation.</p>
+
+    <blockquote data-i18n="mission-quote">
+      <p>"We want to be part of something that matters beyond ourselves. The desert crossing is the method - getting the supplies there is the point."</p>
+    </blockquote>
+
+    <p data-i18n="mission-p4">Victor and Telmo will be driving the February 2027 edition, contributing 40 kg of school materials as part of a convoy that, across all teams, will deliver several tonnes to communities along the route.</p>
+  </div>
+
+</section>
+
+<!-- VIDEO -->
+<section id="video">
+  <div class="container">
+    <p class="section-tag" data-i18n="video-tag">See It For Yourself</p>
+    <h2 data-i18n="video-h2">What <em>UniRaid</em> looks like</h2>
+    <a class="video-link" href="https://www.youtube.com/watch?v=y35jka4Y-zw" target="_blank" rel="noopener">
+      <img src="https://img.youtube.com/vi/y35jka4Y-zw/maxresdefault.jpg" alt="UniRaid video"/>
+      <div class="play"><div><svg width="30" height="30" viewBox="0 0 24 24" fill="#0d0c0a"><polygon points="6,3 20,12 6,21"/></svg></div></div>
+      <span class="yt">Watch on YouTube →</span>
+    </a>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <p class="section-tag" data-i18n="gallery-tag">Previous Editions</p>
+    <h2 data-i18n="gallery-h2">Life on the <em>Piste</em></h2>
+    <p style="color:var(--mute);font-size:1rem" data-i18n="gallery-p">A taste of what awaits - photos from UniRaid crews who've gone before us.</p>
+    <div class="gallery-grid">
+      <div class="gallery-img"><img src="img/g3.jpg" alt="UniRaid car crossing the desert"/></div>
+      <div class="gallery-img"><img src="img/g2.jpg" alt="UniRaid humanitarian moment"/></div>
+      <div class="gallery-img"><img src="img/g5.jpg" alt="UniRaid on the piste"/></div>
+      <div class="gallery-img"><img src="img/g4.jpg" alt="UniRaid Morocco adventure"/></div>
+      <div class="gallery-img"><img src="img/g1.jpg" alt="UniRaid car on desert piste"/></div>
+      <div class="gallery-img"><img src="img/g6.jpg" alt="UniRaid camp setup" style="object-position:center 70%"/></div>
+    </div>
+  </div>
+</section>
+<div class="lightbox" id="lightbox"><span data-i18n="gallery-close">Close</span><img alt=""/></div>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="container">
+    <p class="section-tag" data-i18n="team-tag">The Team</p>
+    <h2 data-i18n="team-h2">Who we <em>are</em></h2>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-avatar">V<img src="victor_profile.jpg" alt="Victor Veau" onerror="this.remove()"></div>
+        <div>
+          <div class="team-name">Victor Veau</div>
+          <div class="team-role" data-i18n="victor-role">Driver · Navigator · Project Lead</div>
+          <div class="team-bio" data-i18n="victor-bio">18-year-old IB student at Oak House School, Barcelona. Passionate about motorsport, adventure, and logistics. Organised this entire project from scratch - registration, sponsorship, car prep, and everything in between.</div>
+          <div class="team-tags"><span class="tag">Driver</span><span class="tag">Navigator</span><span class="tag">Project Lead</span></div>
+        </div>
+      </div>
+      <div class="team-card reveal d2">
+        <div class="team-avatar">T<img src="telmo_profile.jpg" alt="Telmo Espinosa" onerror="this.remove()"></div>
+        <div>
+          <div class="team-name">Telmo Espinosa</div>
+          <div class="team-role" data-i18n="telmo-role">Driver · Navigator · Partner in Crime</div>
+          <div class="team-bio" data-i18n="telmo-bio">18-year-old based in Barcelona with a taste for adventure and a high tolerance for bad roads. Telmo brings calm under pressure and sharp instincts - exactly what you need when the roadbook says one thing and the desert says another.</div>
+          <div class="team-tags"><span class="tag">Driver</span><span class="tag">Navigator</span><span class="tag">Barcelona</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS: hidden until each partner has agreed to be named publicly. Remove the hidden attribute to show. -->
+<section id="partners" hidden>
+  <div class="container">
+    <p class="section-tag" data-i18n="partners-tag">Partners</p>
+    <h2 data-i18n="partners-h2">Riding <em>with us</em></h2>
+    <p class="partners-p" data-i18n="partners-p">The companies and people who made this expedition possible.</p>
+    <div class="partner-row">
+      <div class="partner">Giti Tire<small>PLATINUM</small></div>
+      <div class="partner">Eventar<small>PLATINUM</small></div>
+      <div class="partner">Smartfooding<small>SILVER</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section id="sponsors">
+  <div class="container">
+    <p class="section-tag" data-i18n="support-tag">Support Us</p>
+    <h2 data-i18n="support-h2a">Become a <em>Partner</em></h2>
+    <p class="sponsors-p" data-i18n="support-p">We are looking for partners who share our values of adventure, youth initiative, and international spirit. Your brand travels 2,400 km across Morocco - and we bring your story back to thousands.</p>
+    <div class="tiers">
+      <div class="tier-card tier-platinum reveal">
+        <div class="tier-name">Platinum</div><div class="tier-amount">€2,000+</div>
+        <ul class="tier-perks" data-i18n="plat-perks"><li>Both doors (exterior)</li><li>Bonnet</li><li>Rear windscreen</li><li>Main Partner in all content</li><li>Story per stage</li><li>Social mentions</li><li>Photo + video pack</li></ul>
+      </div>
+      <div class="tier-card tier-gold reveal d1">
+        <div class="tier-name">Gold</div><div class="tier-amount">€1,000</div>
+        <ul class="tier-perks" data-i18n="gold-perks"><li>Rear windscreen</li><li>Interior sticker</li><li>Story per stage</li><li>Social mentions</li><li>Photo + video pack</li></ul>
+      </div>
+      <div class="tier-card tier-silver reveal d2">
+        <div class="tier-name">Silver</div><div class="tier-amount">€500</div>
+        <ul class="tier-perks" data-i18n="silver-perks"><li>Rear windscreen</li><li>Interior sticker</li><li>Social mentions</li><li>Photo pack</li></ul>
+      </div>
+      <div class="tier-card tier-bronze reveal d3">
+        <div class="tier-name">Bronze</div><div class="tier-amount">€200</div>
+        <ul class="tier-perks" data-i18n="bronze-perks"><li>Interior sticker</li><li>Social mentions</li><li>Thank-you credit</li></ul>
+      </div>
+    </div>
+    <div class="sponsor-cta">
+      <div>
+        <h3 data-i18n="sponsor-cta-h3">For Schools & Institutions</h3>
+        <p data-i18n="sponsor-cta-p">We offer to return after the race and deliver a talk to your students about our experience - the planning, the desert, and what we learned. No cost, maximum impact.</p>
+      </div>
+      <div class="cta-side">
+        <a href="https://www.papayoux-solidarite.com/fr/collecte/uniraid-2026" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="sponsor-cta-donate">Donate Now</a>
+        <br><a class="small" href="#contact" style="display:inline-block;margin-top:14px;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-decoration:none" data-i18n="sponsor-cta-btn">or get in touch for sponsorship →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATE -->
+<section id="donate">
+  <div class="container">
+    <p class="section-tag" data-i18n="donate-tag">Material Donations</p>
+    <h2 data-i18n="donate-h2">You can also <em>donate materials</em></h2>
+    <div class="donate-grid">
+      <div>
+        <p data-i18n="donate-p">You don't need to donate money to help us. We accept donations of sports equipment: footballs, basketballs, rugby balls, frisbees, skipping ropes, bibs, cones. Anything that can put a smile on a child's face. Contact us to arrange a drop-off.</p>
+        <a href="#contact" class="cta-btn" data-i18n="donate-cta">Get in touch</a>
+      </div>
+      <div class="donate-items">
+        <div class="charity-box"><div class="label">01</div><p data-i18n="donate-item1">Footballs, basketballs, rugby balls</p></div>
+        <div class="charity-box"><div class="label">02</div><p data-i18n="donate-item2">Frisbees &amp; skipping ropes</p></div>
+        <div class="charity-box"><div class="label">03</div><p data-i18n="donate-item3">Bibs &amp; cones</p></div>
+        <div class="charity-box"><div class="label">04</div><p data-i18n="donate-item4">Pumps &amp; needles</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <p class="section-tag" data-i18n="contact-tag">Contact</p>
+      <h2 data-i18n="contact-h2">Let's <em>Talk</em></h2>
+      <p data-i18n="contact-p">Whether you want to support the project, follow our journey, or just learn more - we'd love to hear from you.</p>
+      <div class="contact-main">
+        <a href="mailto:victor.veauf22@gmail.com" class="contact-email">victor.veauf22@gmail.com</a>
+        <div class="phones">
+          <a href="tel:+34653883889">+34 653 883 889</a>
+          <a href="tel:+34619693210">+34 619 693 210</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <p class="section-tag" style="justify-content:center">Support the project</p>
+        <a href="https://www.papayoux-solidarite.com/fr/collecte/uniraid-2026" target="_blank" rel="noopener" class="btn btn-primary">Donate via Papayoux</a>
+      </div>
+      <div class="contact-line">
+        <span data-i18n="contact-insta">or follow our journey on Instagram</span><br>
+        <a class="contact-ig" href="https://instagram.com/casiprofesionales">@casiprofesionales</a>
+      </div>
+      <div class="media-block">
+        <p class="section-tag" data-i18n="media-tag">Media</p>
+        <p data-i18n="media-p">Victor will be documenting the full expedition - high quality photo and video throughout. He has shot commercially for KIA and Geely, covered motorsport events, and won school photography awards. Available for brand partnerships and content collaboration.</p>
+        <a href="https://www.behance.net/victorveau" target="_blank" rel="noopener" data-i18n="media-portfolio">View Portfolio → behance.net/victorveau</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div data-i18n="footer-left">© 2026 <span>Casi Profesional</span> · Victor Veau & Telmo Espinosa</div>
+  <div><a href="https://instagram.com/casiprofesionales">@casiprofesionales</a> · Barcelona → Tanger → <span>Marrakech</span></div>
+</footer>
+
+<script>
+  // Active nav link
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => { if (!s.hidden && window.scrollY >= s.offsetTop - 120) cur = s.id; });
+    navLinks.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + cur));
+  }, {passive:true});
+
+  // ── LANGUAGE SWITCHER ──
+  const TRANSLATIONS = {
+    fr: {
+      'nav-uniraid': 'UniRaid',
+      'nav-experience': "L'Expérience",
+      'nav-mission': 'Mission',
+      'nav-video': 'Vidéo',
+      'nav-gallery': 'Galerie',
+      'nav-team': 'Équipe',
+      'nav-support': 'Nous Soutenir',
+      'nav-contact': 'Contact',
+      'hero-tag': 'Barcelone → Marrakech · Février 2027',
+      'hero-sub': 'Un convoi humanitaire à travers le Maroc. 2 400 km. Deux jeunes. Une cause.',
+      'hero-countdown': "dates exactes de la course à confirmer par UniRaid",
+      'hero-btn-primary': 'Soutenir le projet',
+      'hero-btn-outline': 'En savoir plus',
+      'cd-days': 'Jours',
+      'cd-hours': 'Heures',
+      'cd-mins': 'Minutes',
+      'cd-secs': 'Secondes',
+      'about-tag': 'Qui sommes-nous',
+      'about-h2a': "Un convoi humanitaire.<br><em>Pas une course.</em>",
+      'about-p1': "L'UniRaid est une expédition humanitaire étudiante organisée par <strong>IRIDIS TRAVEL UNIRAID</strong>, une agence avec plus de 35 ans d'expérience de raids et aventures en Afrique du Nord. Chaque année, des équipes de deux personnes parcourent 2 400 km à travers le Maroc - de la côte méditerranéenne aux montagnes de l'Atlas et au Sahara jusqu'à Marrakech - en transportant des fournitures scolaires pour des communautés rurales isolées.",
+      'about-p2': "Pas de classements, pas de trophées, pas de podium. La mission, c'est la destination : <strong>acheminer les fournitures</strong>, à la main, jusqu'aux enseignants et aux enfants qui les attendent.",
+      'about-box-label': 'Ce que nous apportons',
+      'about-box1-p': "Chaque équipe transporte <strong style=\"color:var(--sand)\">40 kg</strong> de fournitures scolaires - cahiers, stylos, crayons, règles, sacs à dos et produits d'hygiène - collectées avant le départ et remises directement aux écoles et centres communautaires le long du parcours.",
+      'about-box2-label': 'Impact collectif - Février 2026',
+      'about-box2-p': "Lors de la dernière édition, les équipes UniRaid ont livré un total de <strong style=\"color:var(--sand)\">plus de 15 tonnes</strong> de fournitures aux villages et écoles marocains. Victor et Telmo ajouteront leurs 40 kg au convoi de février 2027.",
+      'stat-km': 'Kilomètres',
+      'stat-days': 'Jours',
+      'stat-aid': 'Aide distribuée',
+      'stat-contrib': 'Notre contribution',
+      'route-title': 'Le Parcours',
+      'stop1-desc': 'Départ - Nord du Maroc',
+      'stop2-desc': "Contreforts de l'Atlas & vallées",
+      'stop3-desc': "Sahara - Dunes de l'Erg Chebbi",
+      'stop4-desc': 'Pistes désertiques & étape marathon',
+      'stop5-desc': 'Arrivée - 2 400 km bouclés',
+      'stages-tag': "L'Aventure",
+      'stages-h2a': 'Sept jours qui vous <em>transformeront</em>. Magnifiquement.',
+      'stages-intro': "L'UniRaid est une mission humanitaire - mais la route qu'il vous fait parcourir est comme nulle autre. Pas de GPS. Pas de filet de sécurité. Deux personnes, une voiture, une boussole, et 2 400 km du Maroc entre vous et Marrakech.",
+      'stage1-label': "Temps fort de l'étape",
+      'stage1-title': "L'Étape de Nuit",
+      'stage1-body': "Une étape entière se parcourt dans le noir absolu. Pas de lampadaires, pas de marquages routiers, pas de GPS - juste une boussole, un copilote avec une carte, et les phares qui percent la nuit saharienne. Les équipes naviguent aux étoiles sur des pistes qui disparaissent dans la poussière. <strong>Se perdre n'est pas une métaphore.</strong> C'est une possibilité bien réelle, et les équipes qui finissent sont celles qui gardent leur sang-froid.",
+      'stage2-label': "Temps fort de l'étape",
+      'stage2-title': "L'Étape Marathon",
+      'stage2-body': "L'Étape Marathon dépose les équipes au milieu de nulle part, sans assistance extérieure autorisée pour la nuit. Pas de mécaniciens, pas de véhicules d'assistance, pas de signal téléphonique. Si la voiture tombe en panne, vous la réparez - ou vous dormez à côté. Les équipes campent à ciel ouvert quelque part entre les dunes et l'Atlas. <strong>C'est la version la plus pure de l'expédition.</strong>",
+      'stage3-label': 'Navigation',
+      'stage3-title': 'Sans GPS. Point final.',
+      'stage3-body': "L'UniRaid interdit explicitement les appareils GPS. Chaque kilomètre se navigue à la boussole et avec l'application \"GPS Trip\" - un simple enregistreur de tracé sans guidage. <strong>Vous savez d'où vous êtes partis. Vous savez où vous devez aller.</strong> Ce qui se passe entre les deux dépend de vous.",
+      'stage4-label': 'Le tableau complet',
+      'stage4-title': '2 400 km de contrastes',
+      'stage4-body': "Côte méditerranéenne. Plaines atlantiques. Le Haut Atlas en altitude. La hammada pré-saharienne. Les dunes de l'Erg Chebbi à Merzouga. La vallée du Draa. Les gorges de Nkob. Puis Marrakech. <strong>Sept jours, sept Marocs complètement différents</strong> - et quelque part sur chacun d'eux, une école qui attend ce que vous avez apporté.",
+      'mission-tag': 'Notre Mission',
+      'mission-h2': "Les communautés<br><em>derrière les kilomètres</em>",
+      'mission-p1': "L'intérieur rural du Maroc abrite des centaines de villages avec un accès limité aux fournitures scolaires. Les itinéraires UniRaid traversent directement ces zones - les communautés du Haut Atlas, les villes pré-sahariennes des vallées du Draa et du Ziz, et les villages désertiques près de Merzouga et Erfoud.",
+      'mission-box1-label': "Qui reçoit l'aide",
+      'mission-box1-p': "Écoles primaires rurales, centres communautaires et associations locales dans des villes comme <strong>El Hajeb, Aoufous, Merzouga, Nkob</strong> et les villages du piémont de l'Atlas - à des heures de la ville la plus proche.",
+      'mission-box2-label': 'Notre focus - le sport',
+      'mission-box2-p': "Casi Profesional mise tout sur <strong>l'éveil sportif des enfants</strong>. Nous apportons ballons de foot, de basket, de rugby, frisbees, cordes à sauter, chasubles, cônes et pompes - tout ce qu'il faut pour monter un jeu n'importe où, instantanément.",
+      'mission-p2': "L'UniRaid se déroule <strong>deux fois par an</strong> - en février et en octobre - chaque édition autour de projets de solidarité spécifiques. Les fournitures ne sont jamais déposées dans un entrepôt. Les équipes les livrent <strong>en personne, directement aux portes des écoles</strong>.",
+      'mission-p3': "Le Directeur de l'UniRaid était auparavant le Directeur du <strong>premier Convoi de Solidarité Médecins intégré au Paris-Dakar en Afrique en 1998</strong> - plus de 30 ans d'expérience en logistique humanitaire dans le désert.",
+      'mission-quote': "<p>« Nous voulons faire partie de quelque chose qui compte au-delà de nous-mêmes. La traversée du désert est la méthode - acheminer les fournitures est le but. »</p>",
+      'mission-p4': "Victor et Telmo participeront à l'édition de février 2027, apportant 40 kg de fournitures scolaires dans le cadre d'un convoi qui livrera plusieurs tonnes aux communautés le long du parcours.",
+      'video-tag': 'Voyez par vous-même',
+      'video-h2': "À quoi ressemble <em>l'UniRaid</em>",
+      'gallery-tag': 'Éditions Précédentes',
+      'gallery-h2': 'La vie sur la <em>Piste</em>',
+      'gallery-p': "Un avant-goût de ce qui nous attend - photos d'équipages UniRaid qui sont passés avant nous.",
+      'team-tag': "L'Équipe",
+      'team-h2': 'Qui nous <em>sommes</em>',
+      'victor-role': 'Pilote · Navigateur · Chef de Projet',
+      'victor-bio': "Étudiant IB de 18 ans à l'Oak House School de Barcelone. Passionné de motorsport, d'aventure et de logistique. A organisé l'intégralité de ce projet de zéro - inscription, sponsoring, préparation de la voiture, et tout le reste.",
+      'telmo-role': 'Pilote · Navigateur · Complice',
+      'telmo-bio': "18 ans, basé à Barcelone, avec le goût de l'aventure et une haute tolérance aux mauvaises routes. Telmo apporte calme sous pression et instincts aiguisés - exactement ce qu'il faut quand le carnet de route dit une chose et le désert une autre.",
+      'support-tag': 'Nous Soutenir',
+      'support-h2a': 'Devenez <em>Partenaire</em>',
+      'support-p': "Nous cherchons des partenaires qui partagent nos valeurs d'aventure, d'initiative jeune et d'esprit international. Votre marque voyage 2 400 km à travers le Maroc.",
+      'plat-perks': '<li>Les deux portes (extérieur)</li><li>Capot</li><li>Lunette arrière</li><li>Partenaire principal</li><li>Story par étape</li><li>Mentions réseaux</li><li>Pack photo + vidéo</li>',
+      'gold-perks': '<li>Lunette arrière</li><li>Sticker intérieur</li><li>Story par étape</li><li>Mentions réseaux</li><li>Pack photo + vidéo</li>',
+      'silver-perks': '<li>Lunette arrière</li><li>Sticker intérieur</li><li>Mentions réseaux</li><li>Pack photo</li>',
+      'bronze-perks': '<li>Sticker intérieur</li><li>Mentions réseaux</li><li>Crédit de remerciement</li>',
+      'sponsor-cta-h3': 'Pour les Écoles & Institutions',
+      'sponsor-cta-p': "Nous proposons de revenir après la course et de faire une conférence à vos élèves sur notre expérience - la préparation, le désert et ce que nous avons appris. Sans frais, impact maximal.",
+      'sponsor-cta-donate': 'Faire un don',
+      'sponsor-cta-btn': 'Nous contacter',
+      'donate-tag': 'Dons de Matériel',
+      'donate-h2': 'Vous pouvez aussi <em>donner du matériel</em>',
+      'donate-p': "Vous n'avez pas besoin de donner de l'argent pour nous aider. Nous acceptons des dons de matériel sportif : ballons de foot, de basket ou de rugby, frisbees, cordes à sauter, chasubles, cônes. Contactez-nous pour organiser une remise.",
+      'donate-cta': 'Nous contacter',
+      'donate-item1': 'Ballons de foot, basket, rugby',
+      'donate-item2': 'Frisbees &amp; cordes à sauter',
+      'donate-item3': 'Chasubles &amp; cônes',
+      'donate-item4': 'Pompes &amp; aiguilles',
+      'contact-tag': 'Contact',
+      'contact-h2': 'Parlons-en',
+      'contact-p': "Vous voulez soutenir le projet, suivre notre aventure, ou simplement en savoir plus - écrivez-nous.",
+      'contact-insta': 'ou suivez notre aventure sur Instagram',
+      'media-tag': 'Médias',
+      'media-p': "Victor documentera l'expédition - photo et vidéo haute qualité tout au long du trajet. Il a travaillé pour KIA et Geely, couvert des événements de motorsport et remporté des prix de photographie.",
+      'media-portfolio': 'Voir le Portfolio → behance.net/victorveau',
+      'footer-left': '© 2026 <span>Casi Profesional</span> · Victor Veau & Telmo Espinosa',
+    },
+    en: {
+      'nav-uniraid': 'UniRaid',
+      'nav-experience': 'The Experience',
+      'nav-mission': 'Mission',
+      'nav-video': 'Video',
+      'nav-gallery': 'Gallery',
+      'nav-team': 'Team',
+      'nav-support': 'Support Us',
+      'nav-contact': 'Contact',
+      'hero-tag': 'Barcelona → Marrakech · February 2027',
+      'hero-sub': 'A humanitarian convoy across Morocco. 2,400 km. Two people. One cause.',
+      'hero-countdown': 'exact race dates to be confirmed by UniRaid',
+      'hero-btn-primary': 'Support the Project',
+      'hero-btn-outline': 'Learn More',
+      'cd-days': 'Days',
+      'cd-hours': 'Hours',
+      'cd-mins': 'Minutes',
+      'cd-secs': 'Seconds',
+      'about-tag': 'What is UniRaid',
+      'about-h2a': 'A humanitarian convoy.<br><em>Not a race.</em>',
+      'about-p1': 'UniRaid is a student humanitarian expedition organised by <strong>IRIDIS TRAVEL UNIRAID</strong>, a travel agency with more than 35 years of experience running raids and adventure trips across North Africa. Every year, teams of two drive 2,400 km across Morocco - carrying school supplies for rural communities.',
+      'about-p2': 'There are no rankings, no trophies, no podium. The mission is the destination: <strong>getting the supplies there</strong>, by hand, to the teachers and children waiting for them.',
+      'about-box-label': 'What we bring',
+      'about-box1-p': 'Each team carries <strong style="color:var(--sand);">40 kg</strong> of donated school materials - notebooks, pens, pencils, rulers, backpacks, and hygiene products - collected before departure and handed directly to schools and community centres along the route.',
+      'about-box2-label': 'Collective impact - February 2026',
+      'about-box2-p': 'In the most recent edition, UniRaid crews delivered a combined total of <strong style="color:var(--sand);">over 15 tonnes</strong> of supplies to Moroccan villages and schools. Victor and Telmo will add their 40 kg to the February 2027 convoy.',
+      'stat-km': 'Kilometres',
+      'stat-days': 'Days',
+      'stat-aid': 'Aid delivered',
+      'stat-contrib': 'Our contribution',
+      'route-title': 'The Route',
+      'stop1-desc': 'Start - Northern Morocco',
+      'stop2-desc': 'Atlas foothills &amp; valleys',
+      'stop3-desc': 'Sahara - Erg Chebbi dunes',
+      'stop4-desc': 'Desert pistes &amp; marathon stage',
+      'stop5-desc': 'Finish - 2,400 km completed',
+      'stages-tag': 'The Experience',
+      'stages-h2a': 'Seven days that will <em>break you</em>. Beautifully.',
+      'stages-intro': "UniRaid is a humanitarian mission - but the road it takes you on is unlike anything else. No GPS. No safety net. Two people, one car, a compass, and 2,400 kilometres of Morocco between you and Marrakech.",
+      'stage1-label': 'Stage highlight',
+      'stage1-title': 'The Night Stage',
+      'stage1-body': 'One full stage is driven entirely in the dark. No streetlights, no road markings, no GPS - just a compass, a co-pilot with a map, and headlights cutting into the Saharan night. Teams navigate by the stars across pistes that disappear into dust. <strong>Getting lost is not a metaphor.</strong> It is a very real possibility, and the teams that finish are the ones who keep their heads.',
+      'stage2-label': 'Stage highlight',
+      'stage2-title': 'The Marathon Stage',
+      'stage2-body': 'The Marathon Stage drops teams in the middle of nowhere with no external assistance allowed overnight. No mechanics, no support vehicles, no phone signal. If the car breaks down, you fix it - or you sleep next to it. Teams camp under the open sky between the dunes and the Atlas. <strong>It is the purest version of the expedition.</strong>',
+      'stage3-label': 'Navigation',
+      'stage3-title': 'No GPS. Full stop.',
+      'stage3-body': 'UniRaid explicitly prohibits GPS devices. Every kilometre is navigated using a compass and the "GPS Trip" app - a basic track logger with no routing. <strong>You know where you started. You know where you need to go.</strong> What happens in between is up to you.',
+      'stage4-label': 'The full picture',
+      'stage4-title': '2,400 km of contrast',
+      'stage4-body': 'Mediterranean coast. Atlantic plains. The High Atlas at altitude. Pre-Saharan hammada. The Erg Chebbi dunes at Merzouga. The Draa Valley. The Nkob gorges. Then Marrakech. <strong>Seven days, seven completely different Moroccos</strong> - and somewhere along every one of them, a school waiting for what you brought.',
+      'mission-tag': 'Where it goes',
+      'mission-h2': 'The communities<br><em>behind the kilometres</em>',
+      'mission-p1': "Morocco's rural interior is home to hundreds of villages with limited access to basic school materials. UniRaid routes pass directly through these areas - the High Atlas communities, the pre-Saharan towns of the Draa and Ziz valleys, and desert villages near Merzouga and Erfoud.",
+      'mission-box1-label': 'Who receives the aid',
+      'mission-box1-p': 'Rural primary schools, community centres, and local associations in towns including <strong>El Hajeb, Aoufous, Merzouga, Nkob,</strong> and villages in the Atlas foothills - places hours from the nearest city and rarely reached by aid organisations.',
+      'mission-box2-label': 'Our focus - sport',
+      'mission-box2-p': "Casi Profesional is going all-in on <strong>awakening the sporting side of kids</strong>. We're bringing footballs, basketballs, rugby balls, frisbees, jump ropes, bibs, cones, and pumps - everything needed to set up a game anywhere, instantly.",
+      'mission-p2': 'UniRaid runs <strong>twice a year</strong> - February and October - each edition built around specific solidarity projects and vetted partner associations. Supplies are delivered <strong>in person, directly at the school doors</strong>.',
+      'mission-p3': 'The Director of UniRaid was previously the Director of the <strong>first Convoy of Solidarity Doctors integrated into the Paris-Dakar Rally in Africa in 1998</strong> - giving the organisation more than 30 years of experience in humanitarian desert logistics.',
+      'mission-quote': '<p>"We want to be part of something that matters beyond ourselves. The desert crossing is the method - getting the supplies there is the point."</p>',
+      'mission-p4': 'Victor and Telmo will be driving the February 2027 edition, contributing 40 kg of school materials as part of a convoy that will deliver several tonnes to communities along the route.',
+      'video-tag': 'See It For Yourself',
+      'video-h2': 'What <em>UniRaid</em> looks like',
+      'gallery-tag': 'Previous Editions',
+      'gallery-h2': 'Life on the <em>Piste</em>',
+      'gallery-p': "A taste of what awaits - photos from UniRaid crews who've gone before us.",
+      'team-tag': 'The Team',
+      'team-h2': 'Who we <em>are</em>',
+      'victor-role': 'Driver · Navigator · Project Lead',
+      'victor-bio': '18-year-old IB student at Oak House School, Barcelona. Passionate about motorsport, adventure, and logistics. Organised this entire project from scratch - registration, sponsorship, car prep, and everything in between.',
+      'telmo-role': 'Driver · Navigator · Partner in Crime',
+      'telmo-bio': '18-year-old based in Barcelona with a taste for adventure and a high tolerance for bad roads. Telmo brings calm under pressure and sharp instincts - exactly what you need when the roadbook says one thing and the desert says another.',
+      'support-tag': 'Support Us',
+      'support-h2a': 'Become a <em>Partner</em>',
+      'support-p': "We are looking for partners who share our values of adventure, youth initiative, and international spirit. Your brand travels 2,400 km across Morocco - and we bring your story back to thousands.",
+      'plat-perks': '<li>Both doors (exterior)</li><li>Bonnet</li><li>Rear windscreen</li><li>Main Partner in all content</li><li>Story per stage</li><li>Social mentions</li><li>Photo + video pack</li>',
+      'gold-perks': '<li>Rear windscreen</li><li>Interior sticker</li><li>Story per stage</li><li>Social mentions</li><li>Photo + video pack</li>',
+      'silver-perks': '<li>Rear windscreen</li><li>Interior sticker</li><li>Social mentions</li><li>Photo pack</li>',
+      'bronze-perks': '<li>Interior sticker</li><li>Social mentions</li><li>Thank-you credit</li>',
+      'sponsor-cta-h3': 'For Schools & Institutions',
+      'sponsor-cta-p': "We offer to return after the race and deliver a talk to your students about our experience - the planning, the desert, and what we learned. No cost, maximum impact.",
+      'sponsor-cta-donate': 'Donate Now',
+      'sponsor-cta-btn': 'Get in Touch',
+      'donate-tag': 'Material Donations',
+      'donate-h2': 'You can also <em>donate materials</em>',
+      'donate-p': "You don't need to donate money to help us. We accept donations of sports equipment: footballs, basketballs, rugby balls, frisbees, skipping ropes, bibs, cones. Contact us to arrange a drop-off.",
+      'donate-cta': 'Get in touch',
+      'donate-item1': 'Footballs, basketballs, rugby balls',
+      'donate-item2': 'Frisbees &amp; skipping ropes',
+      'donate-item3': 'Bibs &amp; cones',
+      'donate-item4': 'Pumps &amp; needles',
+      'contact-tag': 'Contact',
+      'contact-h2': "Let's Talk",
+      'contact-p': "Whether you want to support the project, follow our journey, or just learn more - we'd love to hear from you.",
+      'contact-insta': 'or follow our journey on Instagram',
+      'media-tag': 'Media',
+      'media-p': "Victor will be documenting the full expedition - high quality photo and video throughout. He has shot commercially for KIA and Geely, covered motorsport events, and won school photography awards. Available for brand partnerships.",
+      'media-portfolio': 'View Portfolio → behance.net/victorveau',
+      'footer-left': '© 2026 <span>Casi Profesional</span> · Victor Veau & Telmo Espinosa',
+    },
+    es: {
+      'nav-uniraid': 'UniRaid',
+      'nav-experience': 'La Experiencia',
+      'nav-mission': 'Misión',
+      'nav-video': 'Vídeo',
+      'nav-gallery': 'Galería',
+      'nav-team': 'Equipo',
+      'nav-support': 'Apóyanos',
+      'nav-contact': 'Contacto',
+      'hero-tag': 'Barcelona → Marrakech · Febrero 2027',
+      'hero-sub': 'Un convoy humanitario por Marruecos. 2.400 km. Dos jóvenes. Una causa.',
+      'hero-countdown': 'fechas exactas de la carrera por confirmar por UniRaid',
+      'hero-btn-primary': 'Apoyar el proyecto',
+      'hero-btn-outline': 'Saber más',
+      'cd-days': 'Días',
+      'cd-hours': 'Horas',
+      'cd-mins': 'Minutos',
+      'cd-secs': 'Segundos',
+      'about-tag': 'Quiénes somos',
+      'about-h2a': 'Un convoy humanitario.<br><em>No una carrera.</em>',
+      'about-p1': 'UniRaid es una expedición humanitaria estudiantil organizada por <strong>IRIDIS TRAVEL UNIRAID</strong>, una agencia con más de 35 años de experiencia en raids y aventuras por el norte de África. Cada año, equipos de dos personas recorren 2.400 km por Marruecos - llevando material escolar a comunidades rurales aisladas.',
+      'about-p2': 'Sin clasificaciones, sin trofeos, sin podio. La misión es el destino: <strong>entregar el material</strong>, en mano, a los profesores y niños que lo esperan.',
+      'about-box-label': 'Lo que llevamos',
+      'about-box1-p': 'Cada equipo lleva <strong style="color:var(--sand);">40 kg</strong> de material escolar donado - cuadernos, bolígrafos, lápices, reglas, mochilas y productos de higiene - recogidos antes de la salida y entregados directamente a escuelas y centros comunitarios.',
+      'about-box2-label': 'Impacto colectivo - Febrero 2026',
+      'about-box2-p': 'En la edición más reciente, los equipos UniRaid entregaron un total de <strong style="color:var(--sand);">más de 15 toneladas</strong> de material a pueblos y escuelas marroquíes. Victor y Telmo añadirán sus 40 kg al convoy de febrero 2027.',
+      'stat-km': 'Kilómetros',
+      'stat-days': 'Días',
+      'stat-aid': 'Ayuda entregada',
+      'stat-contrib': 'Nuestra contribución',
+      'route-title': 'La Ruta',
+      'stop1-desc': 'Salida - Norte de Marruecos',
+      'stop2-desc': 'Estribaciones del Atlas y valles',
+      'stop3-desc': 'Sahara - Dunas del Erg Chebbi',
+      'stop4-desc': 'Pistas desérticas y etapa maratón',
+      'stop5-desc': 'Llegada - 2.400 km completados',
+      'stages-tag': 'La Aventura',
+      'stages-h2a': 'Siete días que te <em>romperán</em>. Hermosamente.',
+      'stages-intro': 'UniRaid es una misión humanitaria - pero la carretera por la que te lleva es como ninguna otra. Sin GPS. Sin red de seguridad. Dos personas, un coche, una brújula y 2.400 km de Marruecos.',
+      'stage1-label': 'Momento clave',
+      'stage1-title': 'La Etapa Nocturna',
+      'stage1-body': 'Una etapa entera se conduce en la oscuridad total. Sin farolas, sin señales, sin GPS - solo una brújula, un copiloto con mapa y los faros cortando la noche sahariana. <strong>Perderse no es una metáfora.</strong> Es una posibilidad muy real.',
+      'stage2-label': 'Momento clave',
+      'stage2-title': 'La Etapa Maratón',
+      'stage2-body': 'La Etapa Maratón deja a los equipos en medio de ningún sitio sin asistencia externa durante la noche. Sin mecánicos, sin vehículos de apoyo, sin señal. Si el coche se avería, lo arreglas - o duermes al lado. <strong>Es la versión más pura de la expedición.</strong>',
+      'stage3-label': 'Navegación',
+      'stage3-title': 'Sin GPS. Punto.',
+      'stage3-body': 'UniRaid prohíbe explícitamente los GPS. Cada kilómetro se navega con brújula y la app "GPS Trip" - un básico registrador sin navegación. <strong>Sabes dónde empezaste. Sabes adónde tienes que ir.</strong> Lo que pasa en medio depende de ti.',
+      'stage4-label': 'El panorama completo',
+      'stage4-title': '2.400 km de contrastes',
+      'stage4-body': 'Costa mediterránea. Llanuras atlánticas. El Alto Atlas. La hamada pre-sahariana. Las dunas del Erg Chebbi. El Valle del Draa. Las gargantas de Nkob. Luego Marrakech. <strong>Siete días, siete Marruecos distintos</strong> - y en cada uno, una escuela esperando lo que trajiste.',
+      'mission-tag': 'Nuestra Misión',
+      'mission-h2': 'Las comunidades<br><em>detrás de los kilómetros</em>',
+      'mission-p1': 'El interior rural de Marruecos alberga cientos de pueblos con acceso limitado a material escolar. Las rutas UniRaid pasan directamente por estas zonas - el Alto Atlas, los valles del Draa y el Ziz, y pueblos desérticos cerca de Merzouga y Erfoud.',
+      'mission-box1-label': 'Quién recibe la ayuda',
+      'mission-box1-p': 'Escuelas primarias rurales, centros comunitarios y asociaciones locales en pueblos como <strong>El Hajeb, Aoufous, Merzouga, Nkob</strong> - a horas de la ciudad más cercana, raramente alcanzados por organizaciones de ayuda.',
+      'mission-box2-label': 'Nuestro enfoque - el deporte',
+      'mission-box2-p': 'Casi Profesional apuesta todo por <strong>despertar el lado deportivo de los niños</strong>. Llevamos balones de fútbol, baloncesto y rugby, frisbees, comba, petos, conos y bombas - todo para montar un partido en cualquier lugar.',
+      'mission-p2': 'UniRaid se celebra <strong>dos veces al año</strong> - en febrero y octubre. Los materiales se entregan <strong>en persona, directamente en las puertas de las escuelas</strong>.',
+      'mission-p3': 'El Director de UniRaid fue el Director del <strong>primer Convoy de Solidaridad de Médicos en el Rally París-Dakar en 1998</strong> - más de 30 años de experiencia en logística humanitaria en el desierto.',
+      'mission-quote': '<p>"Queremos formar parte de algo que importa más allá de nosotros mismos. La travesía del desierto es el método - llevar el material allí es el objetivo."</p>',
+      'mission-p4': 'Victor y Telmo participarán en la edición de febrero 2027, aportando 40 kg de material escolar en un convoy que entregará varias toneladas a comunidades a lo largo del recorrido.',
+      'video-tag': 'Véalo usted mismo',
+      'video-h2': 'Así es <em>UniRaid</em>',
+      'gallery-tag': 'Ediciones Anteriores',
+      'gallery-h2': 'La vida en la <em>Pista</em>',
+      'gallery-p': 'Un anticipo de lo que nos espera - fotos de equipos UniRaid que han pasado antes que nosotros.',
+      'team-tag': 'El Equipo',
+      'team-h2': 'Quiénes <em>somos</em>',
+      'victor-role': 'Piloto · Navegante · Jefe de Proyecto',
+      'victor-bio': 'Estudiante de IB de 18 años en Oak House School, Barcelona. Apasionado del motorsport, la aventura y la logística. Organizó todo este proyecto desde cero - inscripción, patrocinio, preparación del coche y todo lo demás.',
+      'telmo-role': 'Piloto · Navegante · Cómplice',
+      'telmo-bio': '18 años, residente en Barcelona con gusto por la aventura y alta tolerancia a los caminos malos. Telmo aporta calma bajo presión e instintos afilados - exactamente lo que necesitas cuando el roadbook dice una cosa y el desierto dice otra.',
+      'support-tag': 'Apóyanos',
+      'support-h2a': 'Conviértete en <em>Patrocinador</em>',
+      'support-p': 'Buscamos socios que compartan nuestros valores de aventura, iniciativa joven y espíritu internacional. Tu marca recorre 2.400 km por Marruecos.',
+      'plat-perks': '<li>Ambas puertas (exterior)</li><li>Capó</li><li>Luneta trasera</li><li>Socio principal</li><li>Story por etapa</li><li>Menciones en redes</li><li>Pack foto + vídeo</li>',
+      'gold-perks': '<li>Luneta trasera</li><li>Pegatina interior</li><li>Story por etapa</li><li>Menciones en redes</li><li>Pack foto + vídeo</li>',
+      'silver-perks': '<li>Luneta trasera</li><li>Pegatina interior</li><li>Menciones en redes</li><li>Pack de fotos</li>',
+      'bronze-perks': '<li>Pegatina interior</li><li>Menciones en redes</li><li>Crédito de agradecimiento</li>',
+      'sponsor-cta-h3': 'Para Escuelas e Instituciones',
+      'sponsor-cta-p': 'Nos ofrecemos a volver después de la carrera y dar una charla a sus alumnos sobre nuestra experiencia. Sin coste, impacto máximo.',
+      'sponsor-cta-donate': 'Donar ahora',
+      'sponsor-cta-btn': 'Contáctanos',
+      'donate-tag': 'Donación de Material',
+      'donate-h2': 'También puedes <em>donar material</em>',
+      'donate-p': 'No hace falta donar dinero para ayudarnos. Aceptamos donaciones de material deportivo: balones de fútbol, baloncesto o rugby, frisbees, cuerdas de saltar, petos, conos. Contáctanos para organizar la entrega.',
+      'donate-cta': 'Contáctanos',
+      'donate-item1': 'Balones de fútbol, basket, rugby',
+      'donate-item2': 'Frisbees y cuerdas de saltar',
+      'donate-item3': 'Petos y conos',
+      'donate-item4': 'Bombas y agujas',
+      'contact-tag': 'Contacto',
+      'contact-h2': 'Hablemos',
+      'contact-p': 'Si quieres apoyar el proyecto, seguir nuestra aventura o simplemente saber más - escríbenos.',
+      'contact-insta': 'o sigue nuestro viaje en Instagram',
+      'media-tag': 'Medios',
+      'media-p': 'Victor documentará la expedición completa - foto y vídeo de alta calidad. Ha trabajado para KIA y Geely, cubierto eventos de motorsport y ganado premios de fotografía. Disponible para colaboraciones.',
+      'media-portfolio': 'Ver Portfolio → behance.net/victorveau',
+      'footer-left': '© 2026 <span>Casi Profesional</span> · Victor Veau & Telmo Espinosa',
+    }
+  }
+  const EXTRA_I18N = {"en": {"hero-kicker": "Student humanitarian convoy", "hero-facts": "<b>2,400</b> km · <b>7</b> days · <b>40</b> kg of school supplies", "hero-route": "Tanger → Marrakech", "partners-tag": "Partners", "partners-h2": "Riding <em>with us</em>", "partners-p": "The companies and people who made this expedition possible.", "donate-n1": "01", "donate-n2": "02", "donate-n3": "03", "donate-n4": "04", "gallery-close": "Close"}, "fr": {"hero-kicker": "Convoi humanitaire étudiant", "hero-facts": "<b>2 400</b> km · <b>7</b> jours · <b>40</b> kg de fournitures scolaires", "hero-route": "Tanger → Marrakech", "partners-tag": "Partenaires", "partners-h2": "Ils roulent <em>avec nous</em>", "partners-p": "Les entreprises et les personnes qui rendent cette expédition possible.", "donate-n1": "01", "donate-n2": "02", "donate-n3": "03", "donate-n4": "04", "gallery-close": "Fermer"}, "es": {"hero-kicker": "Convoy humanitario estudiantil", "hero-facts": "<b>2.400</b> km · <b>7</b> días · <b>40</b> kg de material escolar", "hero-route": "Tánger → Marrakech", "partners-tag": "Socios", "partners-h2": "Viajan <em>con nosotros</em>", "partners-p": "Las empresas y personas que hacen posible esta expedición.", "donate-n1": "01", "donate-n2": "02", "donate-n3": "03", "donate-n4": "04", "gallery-close": "Cerrar"}};
+  Object.keys(EXTRA_I18N).forEach(l => { TRANSLATIONS[l] = Object.assign(TRANSLATIONS[l] || {}, EXTRA_I18N[l]); });
+
+
+  let currentLang = 'en';
+  function setLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    const t = TRANSLATIONS[lang];
+    Object.entries(t).forEach(([key, val]) => {
+      document.querySelectorAll('[data-i18n="' + key + '"]').forEach(el => { el.innerHTML = val; });
+    });
+  }
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => { setLang(btn.dataset.lang); if (btn.closest('.mobile-overlay')) closeMobileMenu(); });
+  });
+  setLang('en');
+
+  // ── Hamburger ──
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+  function closeMobileMenu() {
+    hamburgerBtn.classList.remove('open');
+    mobileOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  hamburgerBtn.addEventListener('click', () => {
+    const isOpen = mobileOverlay.classList.toggle('open');
+    hamburgerBtn.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // ── Scroll reveal ──
+  const revealEls = document.querySelectorAll('.reveal, .stage-card, .tier-card, .gallery-img, .stat, .charity-box');
+  revealEls.forEach(el => el.classList.add('reveal'));
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold: .12});
+    revealEls.forEach(el => io.observe(el));
+  } else { revealEls.forEach(el => el.classList.add('in')); }
+
+  // ── Gallery lightbox ──
+  const lb = document.getElementById('lightbox'), lbImg = lb.querySelector('img');
+  document.querySelectorAll('.gallery-img img').forEach(img => img.addEventListener('click', () => { lbImg.src = img.src; lb.classList.add('open'); }));
+  lb.addEventListener('click', () => lb.classList.remove('open'));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+
+</script>
+</body>
+</html>
